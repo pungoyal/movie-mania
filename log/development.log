@@ -1472,3 +1472,716 @@ ActionView::TemplateError (undefined local variable or method `jqgrid_stylesheet
 Rendered rescues/_trace (89.5ms)
 Rendered rescues/_request_and_response (1.3ms)
 Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("movies")[0m
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2009-10-16 21:09:09) [GET]
+Rendering template within layouts/movies
+Rendering movies/new
+Rendered movies/_form (11.1ms)
+
+ActionView::TemplateError (undefined local variable or method `jqgrid_stylesheets' for #<ActionView::Base:0xb743b400>) on line #9 of app/views/layouts/movies.html.erb:
+6:   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+7:   <title>Movies: <%= controller.action_name %></title>
+8:   <%= stylesheet_link_tag 'scaffold' %>
+9:   <%= jqgrid_stylesheets %>
+10:   <%= jqgrid_javascripts %>
+11: </head>
+12: <body>
+
+    app/views/layouts/movies.html.erb:9
+    app/controllers/movies_controller.rb:31:in `new'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#new (for 127.0.0.1 at 2009-10-16 21:09:53) [GET]
+Rendering template within layouts/movies
+Rendering movies/new
+Rendered movies/_form (25.9ms)
+Completed in 56ms (View: 43, DB: 0) | 200 OK [http://localhost/movies/new]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 21:46:16) [GET]
+  [4;36;1mMovie Load (0.6ms)[0m   [0;1mSELECT * FROM "movies" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 35ms (View: 21, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 21:46:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMovie Load (0.6ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/movies/1]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 21:46:20) [GET]
+  [4;35;1mMovie Load (0.6ms)[0m   [0mSELECT * FROM "movies" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 31ms (View: 17, DB: 1) | 200 OK [http://localhost/movies]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (7.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "seen" boolean, "director" varchar(255), "rating" float, "iurl" varchar(255), "summary" text) [0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "director", "seen", "year", "iurl", "summary") VALUES('Up', 8.6, 'Pete Docter', 't', 2009, 'tt1049413', NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091016071920')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("movies")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "seen" boolean, "director" varchar(255), "rating" float, "iurl" varchar(255), "summary" text) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091016071920')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "seen" boolean, "director" varchar(255), "rating" float, "iurl" varchar(255), "summary" text) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091016071920')[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 21:51:08) [GET]
+  [4;35;1mMovie Load (0.9ms)[0m   [0mSELECT * FROM "movies" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 21:51:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMovie Load (0.5ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 96ms (View: 6, DB: 1) | 200 OK [http://localhost/movies/1]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 21:51:21) [GET]
+  [4;36;1mMovie Load (1.6ms)[0m   [0;1mSELECT * FROM "movies" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 28ms (View: 13, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#edit (for 127.0.0.1 at 2009-10-16 21:51:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/edit
+Rendered movies/_form (6.8ms)
+Completed in 25ms (View: 14, DB: 0) | 200 OK [http://localhost/movies/1/edit]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 21:51:33) [GET]
+  [4;35;1mMovie Load (0.5ms)[0m   [0mSELECT * FROM "movies" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 38ms (View: 25, DB: 1) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 21:56:41) [GET]
+  [4;35;1mMovie Load (2.1ms)[0m   [0mSELECT * FROM "movies" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 29ms (View: 14, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 21:56:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMovie Load (0.6ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 76ms (View: 63, DB: 1) | 200 OK [http://localhost/movies/1]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 21:57:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMovie Load (0.5ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/movies/1]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 21:58:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMovie Load (0.4ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/movies/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "language" integer, "seen" boolean, "director" varchar(255), "rating" float, "iurl" varchar(255), "tagline" varchar(255), "summary" text) [0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "director", "language", "seen", "tagline", "year", "iurl", "summary") VALUES('Up', 8.6, 'Pete Docter', 0, 't', '', 2009, 'tt1049413', NULL)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "director", "language", "seen", "tagline", "year", "iurl", "summary") VALUES('Inglourious Basterds', 8.6, 'Quentin Tarantino', 0, 't', '', 2009, 'tt0361748', NULL)[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "director", "language", "seen", "tagline", "year", "iurl", "summary") VALUES('Kaminey', 7.9, 'Vishal Bhardwaj', 1, 't', '', 2009, 'tt1274295', NULL)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "director", "language", "seen", "tagline", "year", "iurl", "summary") VALUES('The Shawshank Redemption', 9.2, 'Frank Darabont', 0, 't', 'Fear can hold you prisoner. Hope can set you free.', 1994, 'tt0111161', NULL)[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "director", "language", "seen", "tagline", "year", "iurl", "summary") VALUES('The Godfather', 9.1, 'Francis Ford Coppola', 0, 'f', 'An offer you can''t refuse.', 1972, 'tt0068646', NULL)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "director", "language", "seen", "tagline", "year", "iurl", "summary") VALUES('Pulp Fiction', 8.9, 'Quentin Tarantino', 0, 't', 'Girls like me don''t make invitations like this to just anyone!', 1994, 'tt0110912', NULL)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091016071920')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("movies")[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:15:46) [GET]
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 38ms (View: 28, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:15:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMovie Load (0.7ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://localhost/movies/1]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:16:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMovie Load (0.7ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://localhost/movies/2]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:16:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMovie Load (0.9ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 3) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://localhost/movies/3]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:22:15) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mMovie Load (0.8ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 5) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://localhost/movies/5]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:23:08) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 5) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 40ms (View: 32, DB: 0) | 200 OK [http://localhost/movies/5]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:29:31) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mMovie Load (0.6ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 5) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+
+ActionView::TemplateError (undefined method `image_url' for #<Movie:0xb75212c0>) on line #3 of app/views/movies/show.html.erb:
+1: <h3>Movie Details</h3>
+2: 
+3: <%=image_tag @movie.image_url %>
+4: 
+5: <table>
+6:   <tr>
+
+    app/views/movies/show.html.erb:3
+    app/controllers/movies_controller.rb:27:in `show'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (24.8ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:29:33) [GET]
+  [4;36;1mMovie Load (1.8ms)[0m   [0;1mSELECT * FROM "movies" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 110ms (View: 95, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "language" integer, "seen" boolean, "director" varchar(255), "rating" float, "imdb_id" varchar(255), "image_url" varchar(255), "tagline" varchar(255), "plot" text) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "language" integer, "seen" boolean, "director" varchar(255), "rating" float, "imdb_id" varchar(255), "image_url" varchar(255), "tagline" varchar(255), "plot" text) [0m
+  [4;36;1mMovie Create (0.2ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Up', 8.6, '', 'Pete Docter', NULL, 0, 't', '', 'tt1049413', 2009)[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Inglourious Basterds', 8.6, NULL, 'Quentin Tarantino', NULL, 0, 't', 'Once upon a time in Nazi occupied France...', 'tt0361748', 2009)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Kaminey', 7.9, NULL, 'Vishal Bhardwaj', NULL, 1, 't', '', 'tt1274295', 2009)[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('The Shawshank Redemption', 9.2, NULL, 'Frank Darabont', NULL, 0, 't', 'Fear can hold you prisoner. Hope can set you free.', 'tt0111161', 1994)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('The Godfather', 9.1, NULL, 'Francis Ford Coppola', NULL, 0, 'f', 'An offer you can''t refuse.', 'tt0068646', 1972)[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Pulp Fiction', 8.9, 'http://ecx.images-amazon.com/images/I/519VHCS1KAL._SL500_AA240_.jpg', 'Quentin Tarantino', NULL, 0, 't', 'Girls like me don''t make invitations like this to just anyone!', 'tt0110912', 1994)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091016071920')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("movies")[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:31:11) [GET]
+  [4;36;1mMovie Load (1.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 40ms (View: 31, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:31:14) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mMovie Load (1.3ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 6) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+
+ActionView::TemplateError (undefined local variable or method `iurl' for #<Movie:0xb7783234>) on line #51 of app/views/movies/show.html.erb:
+48:       IMDB URL
+49:     </td>
+50:     <td>
+51:       <a href="<%=h @movie.imdb_url %>">
+52:         <%=h @movie.imdb_url %>
+53:       </a>
+54:     </td>
+
+    app/models/movie.rb:5:in `imdb_url'
+    app/views/movies/show.html.erb:51
+    app/controllers/movies_controller.rb:27:in `show'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (26.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("movies")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.5ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "language" integer, "seen" boolean, "director" varchar(255), "rating" float, "imdb_id" varchar(255), "image_url" varchar(255), "tagline" varchar(255), "plot" text) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091016071920')[0m
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:32:34) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mMovie Load (0.8ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 6) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 66ms (View: 43, DB: 1) | 200 OK [http://localhost/movies/6]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:32:53) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mMovie Load (0.6ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 6) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/movies/6]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:32:55) [GET]
+  [4;35;1mMovie Load (1.9ms)[0m   [0mSELECT * FROM "movies" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 80ms (View: 60, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:32:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mMovie Load (0.7ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 1) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://localhost/movies/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-16 22:32:58) [GET]
+  Parameters: {"1255630089"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:33:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMovie Load (0.6ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+
+ActionView::TemplateError (can't convert nil into String) on line #3 of app/views/movies/show.html.erb:
+1: <h3>Movie Details</h3>
+2: 
+3: <%=image_tag @movie.image_url %>
+4: 
+5: <table>
+6:   <tr>
+
+    app/views/movies/show.html.erb:3
+    app/controllers/movies_controller.rb:27:in `show'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (26.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:33:11) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mMovie Load (0.7ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 5) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+
+ActionView::TemplateError (can't convert nil into String) on line #3 of app/views/movies/show.html.erb:
+1: <h3>Movie Details</h3>
+2: 
+3: <%=image_tag @movie.image_url %>
+4: 
+5: <table>
+6:   <tr>
+
+    app/views/movies/show.html.erb:3
+    app/controllers/movies_controller.rb:27:in `show'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (38.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:33:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMovie Load (0.7ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 2) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+
+ActionView::TemplateError (can't convert nil into String) on line #3 of app/views/movies/show.html.erb:
+1: <h3>Movie Details</h3>
+2: 
+3: <%=image_tag @movie.image_url %>
+4: 
+5: <table>
+6:   <tr>
+
+    app/views/movies/show.html.erb:3
+    app/controllers/movies_controller.rb:27:in `show'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendered rescues/_trace (26.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMovies (20091016071920)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "year" integer, "language" integer, "seen" boolean, "director" varchar(255), "rating" float, "imdb_id" varchar(255), "image_url" varchar(255), "tagline" varchar(255), "plot" text) [0m
+  [4;35;1mMovie Create (0.2ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Up', 8.6, '', 'Pete Docter', NULL, 0, 't', '', 'tt1049413', 2009)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Inglourious Basterds', 8.6, '', 'Quentin Tarantino', NULL, 0, 't', 'Once upon a time in Nazi occupied France...', 'tt0361748', 2009)[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Kaminey', 7.9, '', 'Vishal Bhardwaj', NULL, 1, 't', '', 'tt1274295', 2009)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('The Shawshank Redemption', 9.2, '', 'Frank Darabont', NULL, 0, 't', 'Fear can hold you prisoner. Hope can set you free.', 'tt0111161', 1994)[0m
+  [4;35;1mMovie Create (0.1ms)[0m   [0mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('The Godfather', 9.1, '', 'Francis Ford Coppola', NULL, 0, 'f', 'An offer you can''t refuse.', 'tt0068646', 1972)[0m
+  [4;36;1mMovie Create (0.1ms)[0m   [0;1mINSERT INTO "movies" ("name", "rating", "image_url", "director", "plot", "language", "seen", "tagline", "imdb_id", "year") VALUES('Pulp Fiction', 8.9, 'http://ecx.images-amazon.com/images/I/519VHCS1KAL._SL500_AA240_.jpg', 'Quentin Tarantino', NULL, 0, 't', 'Girls like me don''t make invitations like this to just anyone!', 'tt0110912', 1994)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091016071920')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("movies")[0m
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:33:58) [GET]
+  [4;35;1mMovie Load (1.9ms)[0m   [0mSELECT * FROM "movies" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 198ms (View: 169, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:34:00) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mMovie Load (0.6ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 5) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 19ms (View: 4, DB: 1) | 200 OK [http://localhost/movies/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-16 22:34:00) [GET]
+  Parameters: {"1255630089"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:34:02) [GET]
+  [4;36;1mMovie Load (2.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 69ms (View: 52, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:34:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mMovie Load (0.7ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 6) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/movies/6]
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:34:05) [GET]
+  [4;35;1mMovie Load (2.1ms)[0m   [0mSELECT * FROM "movies" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 114ms (View: 96, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 22:34:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMovie Load (0.7ms)[0m   [0mSELECT * FROM "movies" WHERE ("movies"."id" = 3) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/movies/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-16 22:34:07) [GET]
+  Parameters: {"1255630089"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendering rescues/layout (not_found)
+
+
+Processing MoviesController#index (for 127.0.0.1 at 2009-10-16 22:34:08) [GET]
+  [4;36;1mMovie Load (1.9ms)[0m   [0;1mSELECT * FROM "movies" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "movies" [0m
+Rendering template within layouts/movies
+Rendering movies/index
+Completed in 70ms (View: 52, DB: 2) | 200 OK [http://localhost/movies]
+
+
+Processing MoviesController#show (for 127.0.0.1 at 2009-10-16 23:38:29) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mMovie Load (0.4ms)[0m   [0;1mSELECT * FROM "movies" WHERE ("movies"."id" = 4) [0m
+Rendering template within layouts/movies
+Rendering movies/show
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/movies/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-16 23:38:29) [GET]
+  Parameters: {"1255716492"=>nil}
+
+ActionController::RoutingError (No route matches "/images/" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162
+
+Rendering rescues/layout (not_found)

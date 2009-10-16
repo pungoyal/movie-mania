@@ -14,11 +14,14 @@ ActiveRecord::Schema.define(:version => 20091016071920) do
   create_table "movies", :force => true do |t|
     t.string  "name"
     t.integer "year"
+    t.integer "language"
     t.boolean "seen"
     t.string  "director"
     t.float   "rating"
-    t.string  "iurl"
-    t.text    "summary"
+    t.string  "imdb_id"
+    t.string  "image_url"
+    t.string  "tagline"
+    t.text    "plot"
   end
 
 end

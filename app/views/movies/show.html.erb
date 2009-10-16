@@ -1,5 +1,7 @@
 <h3>Movie Details</h3>
 
+<%=image_tag @movie.image_url %>
+
 <table>
   <tr>
     <td class="strong">
@@ -15,6 +17,14 @@
     </td>
     <td>
       <%=h @movie.year %>
+    </td>
+  </tr>
+  <tr>
+    <td class="strong">
+      Rating
+    </td>
+    <td class="comingsoon">
+      Coming Soon!
     </td>
   </tr>
   <tr>
@@ -35,18 +45,12 @@
   </tr>
   <tr>
     <td class="strong">
-      Rating
-    </td>
-    <td class="comingsoon">
-      Coming Soon!
-    </td>
-  </tr>
-  <tr>
-    <td class="strong">
-      IMDB
+      IMDB URL
     </td>
     <td>
-      <%=h @movie.iurl %>
+      <a href="<%=h @movie.imdb_url %>">
+        <%=h @movie.imdb_url %>
+      </a>
     </td>
   </tr>
 </table>

@@ -6,6 +6,13 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.xml
   def index
+
+    movies = Movie.find(:all) do
+      if params[:_search] == "true"
+        
+      end
+    end
+
     @movies = Movie.all
 
     respond_to do |format|
