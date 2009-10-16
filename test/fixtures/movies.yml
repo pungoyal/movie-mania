@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  year: 
+up:
+  name: Up
+  year: 2009
 
-two:
-  name: MyString
-  year: 
+inglorious:
+  name: Inglorious Basterds
+  year: 2009 

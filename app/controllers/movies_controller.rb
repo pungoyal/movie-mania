@@ -1,4 +1,8 @@
 class MoviesController < ApplicationController
+
+  before_filter :find_movie,
+                :only => [:show, :edit, :update, :destroy]
+
   # GET /movies
   # GET /movies.xml
   def index
@@ -13,8 +17,6 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.xml
   def show
-    @movie = Movie.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @movie }
@@ -34,7 +36,6 @@ class MoviesController < ApplicationController
 
   # GET /movies/1/edit
   def edit
-    @movie = Movie.find(params[:id])
   end
 
   # POST /movies
@@ -57,7 +58,6 @@ class MoviesController < ApplicationController
   # PUT /movies/1
   # PUT /movies/1.xml
   def update
-    @movie = Movie.find(params[:id])
 
     respond_to do |format|
       if @movie.update_attributes(params[:movie])
@@ -74,12 +74,16 @@ class MoviesController < ApplicationController
   # DELETE /movies/1
   # DELETE /movies/1.xml
   def destroy
-    @movie = Movie.find(params[:id])
     @movie.destroy
 
     respond_to do |format|
       format.html { redirect_to(movies_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+  def find_movie
+    @movie = Movie.find(params[:id])
   end
 end
