@@ -2,15 +2,16 @@
 
 <table>
   <tr>
+    <th></th>
     <th>Name</th>
     <th>Year</th>
   </tr>
 
 <% @movies.each do |movie| %>
   <tr>
+    <td><%= link_to 'Details', movie %></td>
     <td><%=h movie.name %></td>
     <td><%=h movie.year %></td>
-    <td><%= link_to 'Show', movie %></td>
     <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
     <td><%= link_to 'Destroy', movie, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
