@@ -17,6 +17,13 @@ class MovieTest < ActiveSupport::TestCase
 
   test "sample image when no image present" do
     movie = Movie.new
-    assert_equal "empty.png", movie.image_url
+    assert_equal "empty.png", movie.image
+
+    movie.image_url = ""
+    assert_equal "empty.png", movie.image
+
+    sample_image = "http://ecx.images-amazon.com/images/I/519VHCS1KAL._SL500_AA240_.jpg"
+    movie.image_url = sample_image
+    assert_equal sample_image, movie.image
   end
  end
