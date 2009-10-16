@@ -11,6 +11,11 @@ class MovieTest < ActiveSupport::TestCase
 
   test "imdb url is in proper format" do
     movie = Movie.new
+    movie.name = "Kaminey"
+    expected_search_url = "http://www.google.com/search?q=imdb " + movie.name
+
+    assert_equal expected_search_url, movie.imdb_url
+    
     movie.imdb_id = "tt1049413"
     assert_equal "http://www.imdb.com/title/tt1049413", movie.imdb_url
   end

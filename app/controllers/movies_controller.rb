@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
 
     movies = Movie.find(:all) do
       if params[:_search] == "true"
-        
+        name =~ "%#{params[:name]}" if params[:name].present?
       end
     end
 
