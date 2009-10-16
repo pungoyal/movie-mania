@@ -1,0 +1,57 @@
+<% form_for(@movie) do |f| %>
+  <%= f.error_messages %>
+
+    <table>
+      <tr>
+        <td>
+          <%= f.label :name %>*<br />
+        </td>
+        <td>
+          <%= f.text_field :name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :year %><br />
+        </td>
+        <td>
+          <%= f.text_field :year %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :seen %>
+        </td>
+        <td>
+          <%= f.check_box :seen%>          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :director %>
+        </td>
+        <td>
+          <%= f.text_field :director%>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :rating %>
+        </td>
+        <td class="comingsoon">
+          Coming soon!
+        </td>
+      </tr>
+      <tr>
+        <td>
+          IMDB URL
+        </td>
+        <td>
+          <%= f.text_field :iurl%>
+        </td>
+      </tr>
+    </table>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

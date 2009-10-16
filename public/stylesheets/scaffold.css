@@ -52,3 +52,10 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+.strong {
+    font-weight: bold;
+}
+
+.comingsoon {
+    color:green;
+}

@@ -1,15 +1,55 @@
 <h3>Movie Details</h3>
 
-<p>
-  <b>Name:</b>
-  <%=h @movie.name %>
-</p>
-
-<p>
-  <b>Year:</b>
-  <%=h @movie.year %>
-</p>
-
+<table>
+  <tr>
+    <td class="strong">
+      Name
+    </td>
+    <td>
+      <%=h @movie.name %>      
+    </td>
+  </tr>
+  <tr>
+    <td class="strong">
+      Year
+    </td>
+    <td>
+      <%=h @movie.year %>
+    </td>
+  </tr>
+  <tr>
+    <td class="strong">
+      Seen
+    </td>
+    <td>
+      <%=h @movie.seen %>
+    </td>
+  </tr>
+  <tr>
+    <td class="strong">
+      Director
+    </td>
+    <td>
+      <%=h @movie.director %>
+    </td>
+  </tr>
+  <tr>
+    <td class="strong">
+      Rating
+    </td>
+    <td class="comingsoon">
+      Coming Soon!
+    </td>
+  </tr>
+  <tr>
+    <td class="strong">
+      IMDB
+    </td>
+    <td>
+      <%=h @movie.iurl %>
+    </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
