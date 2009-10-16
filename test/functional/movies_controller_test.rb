@@ -14,30 +14,30 @@ class MoviesControllerTest < ActionController::TestCase
 
   test "should create movie" do
     assert_difference('Movie.count') do
-      post :create, :movie => { }
+      post :create, :movie => {:name => "Kaminey", :year => 2009 }
     end
 
     assert_redirected_to movie_path(assigns(:movie))
   end
 
   test "should show movie" do
-    get :show, :id => movies(:one).to_param
+    get :show, :id => movies(:up).to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => movies(:one).to_param
+    get :edit, :id => movies(:up).to_param
     assert_response :success
   end
 
   test "should update movie" do
-    put :update, :id => movies(:one).to_param, :movie => { }
+    put :update, :id => movies(:up).to_param, :movie => { }
     assert_redirected_to movie_path(assigns(:movie))
   end
 
   test "should destroy movie" do
     assert_difference('Movie.count', -1) do
-      delete :destroy, :id => movies(:one).to_param
+      delete :destroy, :id => movies(:up).to_param
     end
 
     assert_redirected_to movies_path
