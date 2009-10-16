@@ -1,1 +1,3 @@
 This small app aims to reduce the hassle of managing multitudes of movies on the disk.
+
+lsof | grep 3000 | grep ruby
